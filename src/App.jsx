@@ -9,6 +9,8 @@ import {
   Outlet,
 } from "react-router-dom";
 import { store } from "./redux/store";
+import { NotificationProvider } from "./context/NotificationContext";
+import Toast from "./components/Toast";
 import Header from "./components/Header";
 
 // Lazy-loaded route components for code-splitting
@@ -60,7 +62,10 @@ const router = createBrowserRouter([
 export default function App() {
   return (
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <NotificationProvider>
+        <Toast />
+        <RouterProvider router={router} />
+      </NotificationProvider>
     </Provider>
   );
 }

@@ -1,15 +1,25 @@
 // Cart slice: manages cart items state via Redux Toolkit
 import { createSlice } from "@reduxjs/toolkit";
 
+// Load cart from localStorage if available
+const loadCartFromStorage = () => {
+  try {
+    const stored = localStorage.getItem("shoppyglobe_cart");
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+};
+
 const initialState = {
-  items: [], // { id, title, price, thumbnail, quantity }
+  items: loadCartFromStorage(), // { id, title, price, thumbnail, quantity }
 };
 
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    
+
     // Add a product to the cart, or increment quantity if it already exists
     addToCart: (state, action) => {
       const product = action.payload;

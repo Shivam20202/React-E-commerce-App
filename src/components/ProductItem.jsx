@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { ShoppingCart, Star } from "lucide-react";
 import { addToCart } from "../redux/cartSlice";
+import { useNotification } from "../context/NotificationContext";
 
 export default function ProductItem({ product }) {
   const dispatch = useDispatch();
+  const { addNotification } = useNotification();
 
   const handleAdd = (e) => {
     e.preventDefault();
     dispatch(addToCart(product));
+    addNotification(`${product.title} added to cart!`, "success", 2500);
   };
 
   return (
@@ -17,7 +20,7 @@ export default function ProductItem({ product }) {
       to={`/product/${product.id}`}
       className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10"
     >
-        
+
       {/* Image */}
       <div className="relative aspect-square overflow-hidden bg-secondary/40">
         <img

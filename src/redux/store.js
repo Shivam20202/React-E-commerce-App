@@ -9,3 +9,9 @@ export const store = configureStore({
     search: searchReducer,
   },
 });
+
+// Subscribe to store changes and persist cart to localStorage
+store.subscribe(() => {
+  const state = store.getState();
+  localStorage.setItem("shoppyglobe_cart", JSON.stringify(state.cart.items));
+});

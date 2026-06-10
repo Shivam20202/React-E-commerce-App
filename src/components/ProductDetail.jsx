@@ -4,11 +4,13 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { ArrowLeft, ShoppingCart, Star } from "lucide-react";
 import { addToCart } from "../redux/cartSlice";
+import { useNotification } from "../context/NotificationContext";
 
 export default function ProductDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { addNotification } = useNotification();
   const [product, setProduct] = useState(null);
   const [activeImg, setActiveImg] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -79,7 +81,7 @@ export default function ProductDetail() {
 
   const handleAdd = () => {
     dispatch(addToCart(product));
-    navigate("/cart");
+    addNotification(`${product.title} added to cart!`, "success", 2500);
   };
 
   return (
