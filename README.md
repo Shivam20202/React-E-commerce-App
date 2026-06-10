@@ -41,6 +41,14 @@ src/shoppy/
     ├── CartItem.jsx     # Single cart line item + qty controls + remove
     ├── Checkout.jsx     # Dummy form + summary + Place Order flow
     └── NotFound.jsx     # 404 page
+
+│── index.html        
+│── tailwind.config.js   
+│── postcss.config.js
+│── vite.config.js
+│── README.md
+│── package.json
+
 ```
 
 ---
