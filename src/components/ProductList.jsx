@@ -33,6 +33,7 @@ export default function ProductList() {
       </section>
     );
   }
+  
 
   if (error) {
     return (
