@@ -1,4 +1,4 @@
-// NotFound: friendly 404 page for unknown routes
+//  NotFound: friendly 404 page for unknown routes
 import { Link } from "react-router-dom";
 import { Compass } from "lucide-react";
 
