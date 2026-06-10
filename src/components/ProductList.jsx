@@ -9,6 +9,7 @@ export default function ProductList() {
   const query = useSelector(selectSearchQuery);
 
   // Filter using redux state (case-insensitive across title, brand, category)
+  
   const filtered = products.filter((p) => {
     const q = query.trim().toLowerCase();
     if (!q) return true;
