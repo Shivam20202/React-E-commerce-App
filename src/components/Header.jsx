@@ -65,8 +65,9 @@ export default function Header() {
           </Link>
         </nav>
       </div>
-      
 
+      
+      
       {/* Mobile search */}
       <div className="px-4 pb-3 md:hidden">
         <div className="relative">
