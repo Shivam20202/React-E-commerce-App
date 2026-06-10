@@ -3,6 +3,7 @@
 A polished e-commerce application built with **React + Vite + Tailwind CSS**, using **Redux Toolkit** for state and **React Router (createBrowserRouter)** for dynamic routing. Lazy-loaded routes, lazy-loaded images, and a curated motion/animation pass give the app a premium feel.
 
 > 🔗 **GitHub Repository:** (https://github.com/Shivam20202/React-E-commerce-App)
+  🔗 **Deployed Link:**  (https://react-e-commerce-app-ruby-ten.vercel.app/)
 
 ---
 
