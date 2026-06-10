@@ -8,6 +8,7 @@ import {
   selectCartTotal,
 } from "../redux/cartSlice";
 
+
 export default function Checkout() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
