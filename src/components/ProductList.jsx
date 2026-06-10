@@ -34,7 +34,6 @@ export default function ProductList() {
     );
   }
   
-
   if (error) {
     return (
       <div className="mx-auto max-w-md px-4 py-20 text-center">
