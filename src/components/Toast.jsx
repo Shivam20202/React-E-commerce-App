@@ -1,4 +1,4 @@
-// Toast component: displays notifications
+//  Toast component: displays notifications
 import { useNotification } from "../context/NotificationContext";
 import { CheckCircle, AlertCircle, X } from "lucide-react";
 
