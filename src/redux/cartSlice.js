@@ -9,6 +9,7 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    
     // Add a product to the cart, or increment quantity if it already exists
     addToCart: (state, action) => {
       const product = action.payload;
