@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        
+
         {/* Brand */}
         <Link to="/" className="group flex items-center gap-2">
           <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-rose-500 text-white shadow-lg shadow-fuchsia-500/30 transition-transform group-hover:scale-110">
@@ -65,6 +65,7 @@ export default function Header() {
           </Link>
         </nav>
       </div>
+      
 
       {/* Mobile search */}
       <div className="px-4 pb-3 md:hidden">
