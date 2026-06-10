@@ -17,6 +17,7 @@ export default function ProductItem({ product }) {
       to={`/product/${product.id}`}
       className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10"
     >
+        
       {/* Image */}
       <div className="relative aspect-square overflow-hidden bg-secondary/40">
         <img
