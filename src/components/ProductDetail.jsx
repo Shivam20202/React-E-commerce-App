@@ -47,7 +47,6 @@ export default function ProductDetail() {
     };
   }, [id]);
 
-  
   if (loading) {
     return (
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-2 lg:px-8">
