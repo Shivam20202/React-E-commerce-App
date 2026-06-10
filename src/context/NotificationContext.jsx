@@ -16,6 +16,7 @@ export function NotificationProvider({ children }) {
     
     return id;
   }, []);
+  
 
   const removeNotification = useCallback((id) => {
     setNotifications((prev) => prev.filter((n) => n.id !== id));
